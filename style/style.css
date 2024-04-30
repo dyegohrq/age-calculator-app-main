@@ -64,6 +64,11 @@ body {
     border-color: var(--light-red);
 }
 
+.form div.error input:valid,
+.form div.error input:focus {
+    border: 1px solid var(--light-red);
+}
+
 .form .error.active small {
     color: var(--light-red);
     font-style: italic;
