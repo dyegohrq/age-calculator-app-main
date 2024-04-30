@@ -44,9 +44,11 @@ body {
 
 .contant {
     width: 90%;
+    max-width: 650px;
     background-color: var(--white);
     padding: 20px;
     border-radius: 20px 20px 80px 20px;
+    margin-bottom: 20px;
 }
 
 .form {
@@ -65,18 +67,26 @@ body {
     font-size: .7em;
     font-weight: 700;
     color: var(--smokey-grey);
+    letter-spacing: 2px;
 }
 
 .form div input {
     width: 100%;
-    padding: 13px;
+    max-width: 130px;
+    padding: 8px 13px;
     border-radius: 8px;
     border: 1px solid var(--light-grey);
     outline: none;
-    font-size: .9em;
+    font-size: 1.2em;
     font-weight: 800;
     color: var(--Off-black);
     letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.form div input:valid,
+.form div input:focus {
+    border: 1px solid var(--Purple);
 }
 
 input[type=number]::-webkit-inner-spin-button { 
@@ -93,4 +103,89 @@ input[type=number] {
     font-weight: bold;
     text-align: left;
     color: var(--smokey-grey);
+}
+
+.separetade {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separetade .circle-icon {
+    width: 65px;
+    height: 65px;
+    background: var(--Purple);
+    border-radius: 50%;
+    padding: 15px;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    transition: all ease-in-out .5s ;
+}
+
+.separetade .circle-icon:hover {
+    background: var(--Off-black);
+}
+
+.separetade .icon {
+    width: 100%;
+    height: 100%;
+    background: url(../assets/images/icon-arrow.svg) no-repeat center / cover;
+}
+
+.separetade .line {
+    width: 100%;
+    height: 1px;
+    background: var(--light-grey);
+}
+
+.footer div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: left;
+    font-size: 1.7em;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.footer div .number {
+    color: var(--Purple);
+    font-size: 62px;
+}
+
+@media screen and (min-width: 768px) {
+    .contant {
+        padding: 40px;
+    }
+
+    .form div label {
+        font-size: 1em;
+    }
+
+    .form div input {
+        padding: 10px 15px;
+        font-size: 1.5em;
+        letter-spacing: 1px;
+    }
+
+    .separetade {
+        justify-content: right;
+    }
+
+    .separetade .circle-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .footer div {
+        font-size: 42px;
+    }
+
+    .footer div .number {
+        font-size: 82px;
+    }
 }
