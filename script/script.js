@@ -15,7 +15,7 @@ let todayDay = date.getDate();
 let todayMonth = date.getMonth() + 1;
 let todayYear = date.getFullYear();
 
-const numberOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+let numberOfMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
 btn.addEventListener('click', (e) => {
     e.preventDefault();
@@ -32,6 +32,10 @@ function isEmpty() {
     if (inputDayValue === '') {
         setErrorFor(inputDay, 'This field is required');
         day.className = 'error active'
+
+        numberDay.innerText = '--'
+        numberMonth.innerText = '--'
+        numberYear.innerText = '--'
     } else {
         setSuccessFor(inputDay);
         day.className = '';
@@ -41,6 +45,10 @@ function isEmpty() {
     if (inputMonthValue === '') {
         setErrorFor(inputMonth, 'This field is required');
         month.className = 'error active'
+
+        numberDay.innerText = '--'
+        numberMonth.innerText = '--'
+        numberYear.innerText = '--'
     } else {
         setSuccessFor(inputMonth);
         month.className = '';
@@ -50,6 +58,10 @@ function isEmpty() {
     if (inputYearValue === '') {
         setErrorFor(inputYear, 'This field is required');
         year.className = 'error active'
+        
+        numberDay.innerText = '--'
+        numberMonth.innerText = '--'
+        numberYear.innerText = '--'
     } else {
         setSuccessFor(inputYear);
         year.className = '';
@@ -66,6 +78,10 @@ function isValed() {
     if (inputDayValue > 31) {
         setErrorFor(inputDay, 'Must be a valid day');
         day.className = 'error active'
+
+        numberDay.innerText = '--'
+        numberMonth.innerText = '--'
+        numberYear.innerText = '--'
     } else if (inputDayValue > 0) {
         setSuccessFor(inputDay);
         day.className = ''
@@ -74,6 +90,10 @@ function isValed() {
     if (inputMonthValue > 12) {
         setErrorFor(inputMonth, 'Must be a valid month');
         month.className = 'error active'
+
+        numberDay.innerText = '--'
+        numberMonth.innerText = '--'
+        numberYear.innerText = '--'
     } else if (inputMonthValue > 0) {
         setSuccessFor(inputMonth);
         month.className = ''
@@ -82,6 +102,10 @@ function isValed() {
     if (inputYearValue > date.getFullYear()) {
         setErrorFor(inputYear, 'Must be in the past');
         year.className = 'error active'
+
+        numberDay.innerText = '--'
+        numberMonth.innerText = '--'
+        numberYear.innerText = '--'
     } else if (inputYearValue > 0) {
         setSuccessFor(inputYear);
         year.className = ''
@@ -113,7 +137,7 @@ function calcAge() {
 
     if (d < 0) {
         m -= 1
-        d += numberOfMonth(Number(inputMonthValue) - 1)
+        d += numberOfMonth[Number(inputMonthValue) - 1]
     }
 
     if (m < 0) {
