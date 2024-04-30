@@ -56,6 +56,22 @@ body {
     gap: 10px;
 }
 
+.form .error  label {
+    color: var(--light-red);
+}
+
+.form .error  input {
+    border-color: var(--light-red);
+}
+
+.form .error.active small {
+    color: var(--light-red);
+    font-style: italic;
+    font-size: .7em;
+    font-weight: 500;
+    visibility: visible;
+}
+
 .form div {
     display: flex;
     flex-direction: column;
@@ -82,6 +98,10 @@ body {
     color: var(--Off-black);
     letter-spacing: 1px;
     cursor: pointer;
+}
+
+.form div small {
+    visibility: hidden;
 }
 
 .form div input:valid,
@@ -161,14 +181,18 @@ input[type=number] {
     .contant {
         padding: 40px;
     }
+    
+    .form {
+        gap: 20px;
+    }
 
     .form div label {
-        font-size: 1em;
+        font-size: .8em;
     }
 
     .form div input {
         padding: 10px 15px;
-        font-size: 1.5em;
+        font-size: 1.2em;
         letter-spacing: 1px;
     }
 

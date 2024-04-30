@@ -20,21 +20,24 @@
   <div class="container">
     <div class="contant">
       <form action="" class="form" id="form" novalidate>
-        <div class="form-dd">
+        <div class="form-dd form-control" id="form-dd">
           <label for="day">Day</label>
           <input type="number" required name="day" id="day" placeholder="DD" autocomplete="off">
+          <small>mensage error</small>
         </div>
-        <div class="form-mm">
+        <div class="form-mm form-control" id="form-mm">
           <label for="month">Month</label>
           <input type="number" required name="month" id="month" placeholder="MM" autocomplete="off">
+          <small>mensage error</small>
         </div>
-        <div class="yyyy">
+        <div class="form-yyyy form-control" id="form-yyyy">
           <label for="year">Year</label>
           <input type="number" required name="year" id="year" placeholder="YYYY" autocomplete="off">
+          <small>mensage error</small>
         </div>
       </form>
       <div class="separetade">
-        <button class="circle-icon">
+        <button type="submit" class="circle-icon" id="circle-icon">
           <div class="icon"></div>
         </button>
         <div class="line"></div>
@@ -57,5 +60,6 @@
     </div>
   </div>
   
+  <script src="script/script.js"></script>
 </body>
 </html>
